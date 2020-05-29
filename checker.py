@@ -26,17 +26,21 @@ def check():
         exit("Please check your internet connection.")
     except Exception as error:
         exit(error)
-        
-    try:
-        download_chrome_driver(overwrite=False)
-        opts = webdriver.ChromeOptions()
-        opts.headless = True
-        webdriver.Chrome(executable_path=f"{current_path}/chromedriver", options=opts).close()
-    except selenium_exceptions as error:
-        del_chrome_driver()
-        exit("Chrome Driver is not available. Please update the Chrome Driver.")
-    except Exception as error:
-        exit(error)
+    
+    for _ in range(2):
+        try:
+            download_chrome_driver(overwrite=False)
+            opts = webdriver.ChromeOptions()
+            opts.headless = True
+            webdriver.Chrome(executable_path=f"{current_path}/chromedriver", options=opts).close()
+            break
+        except selenium_exceptions as error:
+            del_chrome_driver()
+            continue
+        except Exception as error:
+            exit(error)
+    else:
+        exit("Download Chrome Driver failed. \nPlease re-download the driver via https://sites.google.com/a/chromium.org/chromedriver.")
     
     try:
         get("https://cdx.nchc.org.tw", timeout=3).close()
