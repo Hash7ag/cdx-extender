@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sys import exit
 from time import sleep
 
