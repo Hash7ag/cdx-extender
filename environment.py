@@ -45,7 +45,7 @@ def del_user_file():
 def download_chrome_driver(overwrite):
     try:
         if not Path(f"{current_path}/chromedriver").exists() or overwrite:
-            print("Download the Chrome Driver...", end="", flush=True)
+            print("Download Chrome Driver...", end="", flush=True)
             del_chrome_driver()
 
             browser_version = check_output(["google-chrome", "--version"]).decode().split()[-1]
