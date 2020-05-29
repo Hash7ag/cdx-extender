@@ -34,9 +34,6 @@ parser = ArgumentParser(
 parser.add_argument(
     "-H", "--headless", dest="headless",
     action="store_true", help="set headless browser")
-parser.add_argument(
-    "-S", "--skip-checking", dest="skip_checking",
-    action="store_true", help="skip the environment checking")
 
 
 group = parser.add_mutually_exclusive_group()

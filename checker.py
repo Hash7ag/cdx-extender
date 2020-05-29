@@ -15,38 +15,34 @@ from environment import \
 
 
 def check():
-    if not args.skip_checking:
-        print("Check the current environment...", flush=True)
+    print("Check the current environment...", flush=True)
 
-        if not platform.startswith("linux"):
-            exit('This platform is not supported.')
-
-        try:
-            create_connection(("1.1.1.1", 80), timeout=3).close()
-        except socket_exceptions:
-            exit("Please check your internet connection.")
-        except Exception as error:
-            exit(error)
-            
-        try:
-            download_chrome_driver(overwrite=False)
-
-            opts = webdriver.ChromeOptions()
-            opts.headless = True
-            webdriver.Chrome(executable_path=f"{current_path}/chromedriver", options=opts).close()
-        except selenium_exceptions as error:
-            del_chrome_driver()
-            exit("Chrome Driver is not available. Please update the Chrome Driver.")
-        except Exception as error:
-            exit(error)
-
-        try:
-            get("https://cdx.nchc.org.tw", timeout=3).close()
-        except requests_exceptions:
-            exit("CDX cannot be reached. Please try again later.")
-        except Exception as error:
-            exit(error)
-
-        print("Now, it's ready to go.", flush=True)
+    if not platform.startswith("linux"):
+        exit('This platform is not supported.')
     
+    try:
+        create_connection(("1.1.1.1", 80), timeout=3).close()
+    except socket_exceptions:
+        exit("Please check your internet connection.")
+    except Exception as error:
+        exit(error)
+        
+    try:
+        download_chrome_driver(overwrite=False)
+        opts = webdriver.ChromeOptions()
+        opts.headless = True
+        webdriver.Chrome(executable_path=f"{current_path}/chromedriver", options=opts).close()
+    except selenium_exceptions as error:
+        del_chrome_driver()
+        exit("Chrome Driver is not available. Please update the Chrome Driver.")
+    except Exception as error:
+        exit(error)
     
+    try:
+        get("https://cdx.nchc.org.tw", timeout=3).close()
+    except requests_exceptions:
+        exit("CDX cannot be reached. Please try again later.")
+    except Exception as error:
+        exit(error)
+    
+    print("Now, it's ready to go.", flush=True)
