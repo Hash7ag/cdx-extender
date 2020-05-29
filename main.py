@@ -32,23 +32,28 @@ def main():
         exit(error)
     
     try:
+        browser.execute_script("document.getElementsByName('login_user_email')[0].type='text';")
         browser.find_element_by_name("login_user_email").send_keys(user[0])
         browser.find_element_by_name("login_user_password").send_keys(user[1])
         browser.find_elements_by_class_name("btn-success")[0].click()
-
-        browser.get("https://cdx.nchc.org.tw/setting_vmmgt_common.php")
         WebDriverWait(browser, 3).\
             until(expected_conditions.\
                 alert_is_present())
-        
-        del_user_file()
-        exit("Incorrect username or password.")
+        alert = browser.switch_to.alert
+        if "非法字元" in alert.text:
+            exit("Incorrect username.")
+        elif "沒有權限" in alert.text:
+            exit("Incorrect username or password.")
+        else:
+            exit(alert.text)
     except selenium_exceptions.TimeoutException:
         pass
     except Exception as error:
         exit(error)
 
     try:
+        browser.get("https://cdx.nchc.org.tw/setting_vmmgt_common.php")
+
         for i in range(max(1, len(browser.find_elements_by_class_name("page-link")))):
             if i != 0:
                 browser.find_elements_by_class_name("page-link")[i].click()
@@ -64,10 +69,8 @@ def main():
         browser.quit()
 
         print("Extend Completed!")
-
     except Exception as error:
         exit(error)
-
 
 if __name__ == '__main__':
     main()
