@@ -19,7 +19,7 @@ class ResetUserFile(Action):
         set_user_file()
         exit("The user file has been reset.")
 
-class DeleteUserFile(Action):
+class ClearUserFile(Action):
     def __call__(self, parser, namespace, values, option_string):
         del_user_file()
         exit("The user file has been deleted.")
@@ -38,16 +38,13 @@ parser.add_argument(
 
 group = parser.add_mutually_exclusive_group()
 group.add_argument(
-    "-D", "--download-chromedriver", dest="download_chrome_driver",
-    nargs='?', type=bool, default=False,
+    "-D", "--download-chromedriver", dest="download_chrome_driver", nargs=0,
     action=DownloadChromeDriver, help=" download and overwrite(if any) the Chrome Driver and exit")
 group.add_argument(
-    "-reset", dest="reset",
-    nargs='?', type=bool, default=False,
+    "--reset", dest="reset", nargs=0,
     action=ResetUserFile, help="reset the user data and exit")
 group.add_argument(
-    "-delete", dest="delete",
-    nargs='?', type=bool, default=False,
-    action=DeleteUserFile, help="clear the user data and exit")
+    "--clear", dest="clear", nargs=0,
+    action=ClearUserFile, help="clear the user data and exit")
 
 args = parser.parse_args()
