@@ -29,7 +29,7 @@ parser = ArgumentParser(
     prog="cdx-extender",
     formatter_class=RawDescriptionHelpFormatter,
     description="The Solution to Extend the Deadline for the Virtual Machines on CDX", 
-    epilog="It's better to work with Cron(crontab) on Linux.")
+    epilog="It's better to work with cron(crontab) on Linux.")
 
 parser.add_argument(
     "-H", "--headless", dest="headless",
