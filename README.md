@@ -3,6 +3,8 @@
 
 The solution to extend the deadline for the virtual machines on [CDX](https://cdx.nchc.org.tw/).
 
+Ohter Languages: English, [繁體中文](README.zh-tw.md)
+
 ## Installing
 ### Dependencies
 - [Google Chrome](https://chrome.google.com/)
