@@ -40,7 +40,7 @@ def check():
         except Exception as error:
             exit(error)
     else:
-        exit("Download Chrome Driver failed. \nPlease re-download the driver via https://sites.google.com/a/chromium.org/chromedriver.")
+        exit("Download ChromeDriver failed. \nPlease re-download the driver via https://sites.google.com/a/chromium.org/chromedriver.")
     
     try:
         get("https://cdx.nchc.org.tw", timeout=3).close()
