@@ -128,11 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# VSCode
+# VSCode stuff:
 .vscode/
 
 # User file
 .user
 
-# Chrome Driver
+# ChromeDriver
 chromedriver
