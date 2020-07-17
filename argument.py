@@ -38,8 +38,8 @@ parser.add_argument(
 
 group = parser.add_mutually_exclusive_group()
 group.add_argument(
-    "-D", "--download-chromedriver", dest="download_chrome_driver", nargs=0,
-    action=DownloadChromeDriver, help=" download and overwrite(if any) the Chrome Driver and exit")
+    "-D", "--download-chromedriver", dest="download_chromedriver", nargs=0,
+    action=DownloadChromeDriver, help=" download and overwrite(if any) the ChromeDriver and exit")
 group.add_argument(
     "--reset", dest="reset", nargs=0,
     action=ResetUserFile, help="reset the user data and exit")
