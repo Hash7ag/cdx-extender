@@ -29,7 +29,7 @@ optional arguments:
   -h, --help            show the help message and exit
   -H, --headless        set headless browser
   -D, --download-chromedriver
-                        download and overwrite(if any) the Chrome Driver and exit
+                        download and overwrite(if any) the ChromeDriver and exit
   --reset               reset the user data and exit
   --clear               clear the user data and exit
 ```
