@@ -39,3 +39,8 @@ optional arguments:
 ~/cdx-extender/main.py
 ```
 It's better to work with [cron(crontab)](https://en.wikipedia.org/wiki/Cron) on Linux.
+
+## License
+Copyright © 2020 Hash7ag All Rights Reserved
+
+This project is licensed under the [MIT License](LICENSE).

@@ -39,3 +39,8 @@ python3 -m pip install -r requirements.txt
 ~/cdx-extender/main.py
 ```
 搭配 Linux [cron(crontab)](https://en.wikipedia.org/wiki/Cron) 使用體驗更佳。
+
+## 版權聲明
+著作權 © 2020 Hash7ag 版權所有
+
+本專案採用 [MIT 授權條款](LICENSE)
