@@ -1,7 +1,7 @@
 # CDX Extender
 [![MyGet](https://img.shields.io/github/license/Hash7ag/cdx-extender)](https://github.com/Hash7ag/cdx-extender/blob/master/LICENSE)
 
-國網中心[雲端資安攻防平台(CDX)](https://cdx.nchc.org.tw/)延長虛擬機關機腳本。
+國網中心[雲端資安攻防平台（CDX）](https://cdx.nchc.org.tw/)延長虛擬機關機腳本。
 
 其它語言：[English](README.md)、繁體中文
 
