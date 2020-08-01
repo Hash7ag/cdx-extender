@@ -5,6 +5,9 @@ The solution to extend the deadline for the virtual machines on [CDX](https://cd
 
 Ohter Languages: English, [繁體中文](README.zh-tw.md)
 
+## Notice
+- **Since CDX added Google reCAPTCHA to login, this project is not supported anymore.**
+
 ## Installing
 ### Dependencies
 - [Google Chrome](https://chrome.google.com/)

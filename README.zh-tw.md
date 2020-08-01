@@ -5,6 +5,9 @@
 
 其它語言：[English](README.md)、繁體中文
 
+## 注意
+- **由於 CDX 平台已於登入頁面加入 Google reCAPTCHA 驗證，因此本專已停止支援。**
+
 ## 安裝步驟
 ### 環境需求
 - [Google Chrome](https://chrome.google.com/)
