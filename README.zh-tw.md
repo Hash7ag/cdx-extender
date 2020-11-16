@@ -6,7 +6,7 @@
 其它語言：[English](README.md)、繁體中文
 
 ## 注意
-- **由於 [CDX 平台](https://cdx.nchc.org.tw/)已於登入頁面加入 Google reCAPTCHA 驗證，因此本專已停止支援。**
+- **由於 [CDX 平台](https://cdx.nchc.org.tw/) 已於登入過程中整合 Google reCAPTCHA 驗證，因此本專已停止支援。**
 
 ## 安裝步驟
 ### 環境需求
